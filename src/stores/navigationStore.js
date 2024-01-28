@@ -7,7 +7,6 @@ export const useNavigationStore = defineStore('navigation', () => {
   const getCategory = async () => {
     let res = await getCategoryAPI()
     navigationList.value = res.data.result
-    console.log(navigationList.value, res);
   }
   return { navigationList, getCategory }
 })

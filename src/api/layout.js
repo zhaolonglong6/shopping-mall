@@ -1,7 +1,7 @@
 import instance from "./index";
 
-export async function getCategoryAPI() {
-  return await instance({
+export function getCategoryAPI() {
+  return instance({
     url: 'home/category/head'
   })
 }
