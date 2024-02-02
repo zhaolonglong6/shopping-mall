@@ -13,7 +13,9 @@ const navigationStore = useNavigationStore()
       v-for="item in navigationStore.navigationList"
       :key="item.id"
     >
-      <RouterLink to="/">{{ item.name }}</RouterLink>
+      <RouterLink :to="`/category/${item.id}`" active-class="active">{{
+        item.name
+      }}</RouterLink>
     </li>
   </ul>
 </template>

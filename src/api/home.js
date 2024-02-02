@@ -1,9 +1,12 @@
 import instance from "./index";
 
 // banner数据
-export function getBannerApi() {
+export function getBannerApi(distributionSite = '1') {
   return instance({
-    url: '/home/banner'
+    url: '/home/banner',
+    params: {
+      distributionSite
+    }
   })
 }
 
@@ -18,5 +21,12 @@ export const findNewAPI = () => {
 export function getHotAPI() {
   return instance({
     url: '/home/hot'
+  })
+}
+
+// 商品详情
+export function getGoodsAPI() {
+  return instance({
+    url: '/home/goods'
   })
 }

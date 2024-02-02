@@ -7,22 +7,22 @@ const navigationStore = useNavigationStore()
   <div class="home-category">
     <ul class="menu">
       <li v-for="item in navigationStore.navigationList" :key="item.id">
-        <router-link to="/">{{ item.name }}</router-link>
-        <router-link v-for="i in item.children.slice(0, 2)" :key="i.id" to="/">
+        <RouterLink to="/">{{ item.name }}</RouterLink>
+        <RouterLink v-for="i in item.children.slice(0, 2)" :key="i.id" to="/">
           {{ i.name }}
-        </router-link>
+        </RouterLink>
         <div class="layer">
           <h4>分类推荐 <small>根据您的购买或浏览记录推荐</small></h4>
           <ul>
             <li v-for="m in item.goods" :key="m.id">
-              <router-link to="/">
+              <RouterLink to="/">
                 <img :src="m.picture" alt="" />
                 <div class="info">
                   <p class="name ellipsis-2">{{ m.name }}</p>
                   <p class="desc ellipsis">{{ m.desc }}</p>
                   <p class="price"><i>¥</i>{{ m.price }}</p>
                 </div>
-              </router-link>
+              </RouterLink>
             </li>
           </ul>
         </div>
